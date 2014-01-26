@@ -1,0 +1,1 @@
+require 'devise/inactivatable/inactivatable'
