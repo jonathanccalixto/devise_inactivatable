@@ -17,7 +17,7 @@ module Devise
       end
 
       def active?
-        !!inactivated_at
+        !inactivated_at
       end
 
       def inactive?
