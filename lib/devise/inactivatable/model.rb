@@ -17,11 +17,11 @@ module Devise
       end
 
       def active?
-        !!deactivated_at
+        !!inactivated_at
       end
 
       def inactive?
-        !!deactivated_at
+        !!inactivated_at
       end
 
       def inactive_message

@@ -21,11 +21,11 @@ Or install it yourself as:
 ## Usage
 
     u = User.create(:name => 'John Doe', :password => "john.doe")
-    u.deactivated? # false
+    u.inactive? # false
     u.active_for_authentication? # true
     u.inactive_message # :inactive
-    u.deactivate!
-    u.deactivated? # true
+    u.inactivate!
+    u.inactive? # true
     u.active_for_authentication? # false
     u.inactive_message # :inactivated
 
