@@ -3,7 +3,6 @@ require 'devise/strategies/database_authenticatable'
 module Devise
   module Models
     module Inactivatable
-
       def active_for_authentication?
         active? && super
       end
@@ -27,7 +26,6 @@ module Devise
       def inactive_message
         inactive? ? :inactivated : super
       end
-
     end
   end
 end

@@ -50,12 +50,17 @@ Include in your model:
       devise :database_authentication, :inactivatable
     end
 
-Adding four wonderful new methods, and modifications to two other methods:
+Adding four wonderful new methods:
 
 - activate! : active the account if it is inactive
 - inactivate! : inactive the account if it is active
 - active? : checks whether the account is active
 - inactive? : checks whether the account is inactive
+
+And modifications to two other methods:
+
+- active_for_authentication? : If inactive returns false, else it preforms the super method
+- inactive_message : If inactive returns :inactivated, else it performs the super method
 
 ## License
 
