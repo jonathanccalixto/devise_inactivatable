@@ -8,6 +8,9 @@ class CreateTables < ActiveRecord::Migration
       t.string :email,              :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
 
+      ## Inactivatable
+      t.datetime :inactivated_at
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
@@ -46,6 +49,9 @@ class CreateTables < ActiveRecord::Migration
       ## Database authenticatable
       t.string :email,              :null => true
       t.string :encrypted_password, :null => true
+
+      ## Inactivatable
+      t.datetime :inactivated_at
 
       ## Recoverable
       t.string   :reset_password_token
